@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If Else</title>
+    <style>
+        body{
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p id="msg"></p>
+        <input type="text" name="nome" id="nome">
+        <button onclick="verificar()">Verificar</button>
+    </div>
+    <script>
+        function verificar(){
+            let nome = document.getElementById('nome').value
+            let msg = document.getElementById('msg')
+            if (nome == "" || nome == null) {
+                msg.innerHTML = 'Digite um nome!'
+                msg.style.color = 'red'
+            } else {
+                msg.innerHTML = 'Tudo certinho!'
+                msg.style.color = 'Blue'
+            }
+        }
+    </script>
+</body>
+</html>

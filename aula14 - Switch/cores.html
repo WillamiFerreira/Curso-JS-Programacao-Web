@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch</title>
+    <style>
+        body{
+            height: 100vh;
+
+        }
+        main{
+            position: relative; top: 100px;
+            margin: auto;
+            width: fit-content;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <p>Digite uma cor:</p>
+        <input type="text" name="cor" id="cor">
+        <button onclick="verificarCor()">Verificar</button>
+    </main>
+    <script>
+        function verificarCor(){
+            let cor = window.document.getElementById("cor").value;
+            let msg = window.document.getElementsByTagName("p")[0];
+            cor = cor.toLowerCase()
+
+            switch (cor) {
+                case "azul":
+                    document.body.style.backgroundColor = 'blue'
+                    msg.style.visibility = 'hidden'
+                    break;
+                case "vermelho":
+                    document.body.style.backgroundColor = "red";
+                    msg.style.visibility = 'hidden'
+                    break;
+                case "verde":
+                    document.body.style.backgroundColor = "green";
+                    msg.style.visibility = 'hidden'
+                    break;
+                default:
+                    msg.innerHTML = 'Cor não disponível.'
+
+            }
+        }
+    </script>
+</body>
+</html>
